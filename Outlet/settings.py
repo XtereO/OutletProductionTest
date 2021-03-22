@@ -91,11 +91,10 @@ WSGI_APPLICATION = 'Outlet.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'outlet',
-        'USER': 'root',
-        'PASSWORD': '12345678D',
-        'HOST': 'localhost',
-        'PORT': '3306'
+        'NAME': 'xtereo_outletest',
+        'USER': 'xtereo_outletest',
+        'PASSWORD': 'pass123worD',
+        'HOST': 'xtereo.beget.tech'
     }
 }   
 
