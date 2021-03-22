@@ -151,7 +151,7 @@ CORS_ORIGIN_WHITELIST=[
     "http://localhost:3000",
     "http://localhost:8080",
     "http://127.0.0.1:8000",
-    'xtereo.beget.tech'
+    'http://xtereo.beget.tech',
 ]
 CORS_ALLOWED_ORIGINS = [
     'https://outlettest.herokuapp.com'
