@@ -94,7 +94,8 @@ DATABASES = {
         'NAME': 'xtereo_outletest',
         'USER': 'xtereo_outletest',
         'PASSWORD': 'pass123worD',
-        'HOST': 'xtereo.beget.tech'
+        'HOST': 'xtereo.beget.tech',
+        'PORT':3306
     }
 }   
 
@@ -150,6 +151,7 @@ CORS_ORIGIN_WHITELIST=[
     "http://localhost:3000",
     "http://localhost:8080",
     "http://127.0.0.1:8000",
+    'xtereo.beget.tech'
 ]
 CORS_ALLOWED_ORIGINS = [
     'https://outlettest.herokuapp.com'
