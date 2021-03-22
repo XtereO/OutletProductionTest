@@ -90,8 +90,11 @@ WSGI_APPLICATION = 'Outlet.wsgi.application'
 #}
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'outlet',
+        'USER':'root',
+        'HOST':'localhost',
+        'PASSWORD':'12345678D'
     }
 }
 

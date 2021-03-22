@@ -10,6 +10,7 @@ pillow = "*"
 django-heroku = "*"
 gunicorn = "*"
 django-cors-headers = "*"
+mysqlclient = "*"
 
 [dev-packages]
 
