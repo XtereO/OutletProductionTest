@@ -2,6 +2,8 @@ import React, { useEffect } from "react"
 import { AllParamsType, FiltersType, setRimsThunk } from "../../BLL/Reducers/rimsReducer"
 import Lenta from "../Lenta/Lenta"
 import FilterRims from "../Bricks/FilterRims"
+import { useHistory } from "react-router"
+const queryString:any = require('query-string');
 
 type PropsType={
     allParams:AllParamsType
@@ -22,6 +24,11 @@ let RimsPage:React.FC<PropsType>=(props)=>{
     },[props.match.params.id])
     useEffect(()=>{ 
         props.setAllParamsThunk()
+        return (()=>{
+            props.setRimsThunk({color:0,material:0,
+            shape:0,brand:0,
+            sort_by_price:null,gender:0},1)
+        })
     },[])
     return<div>
         <Lenta topic={"Оправы"} allParams={props.allParams}

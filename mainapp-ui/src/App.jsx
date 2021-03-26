@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import { Provider } from 'react-redux';
 import store from "./BLL/store"
-import Main from "./UI/Main/ContainerMain";
+import Main from "./UI/Main/Main";
 import Footer from "./UI/Footer/Footer";
 
 function App() {

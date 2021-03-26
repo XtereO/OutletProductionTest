@@ -26,6 +26,11 @@ let SunGlassesPage:React.FC<PropsType>=(props)=>{
     },[props.match.params.id])
     useEffect(()=>{
         props.setAllParamsThunk()
+        return (()=>{
+            props.setRimsThunk({color:0,material:0,
+            shape:0,brand:0,
+            sort_by_price:null,gender:0},1,true)
+        })
     },[])
     return<div>
         <Lenta topic={"Солнцезащитные очки"} allParams={props.allParams}

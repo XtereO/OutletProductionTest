@@ -2,7 +2,8 @@ import React from "react";
 import preLoader from "../../media/loading.gif";
 
 let withSuspense =(Component)=>{
-    return<React.Suspense fallback={<img src={preLoader} />}>
+    return<React.Suspense fallback={<img 
+    className="center" src={preLoader} />}>
         <Component/>
     </React.Suspense>
 }

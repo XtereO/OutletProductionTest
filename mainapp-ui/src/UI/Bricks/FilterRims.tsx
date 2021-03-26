@@ -14,7 +14,9 @@ let FilterRims:React.FC<PropsType> = (props) => {
     setAllParams(props.allParams)
   },[props.allParams])
   return (
-    <Formik initialValues={{
+    <Formik
+    enableReinitialize
+    initialValues={{
       //choosed params
       color:props.filters.color,
       material:props.filters.material,
@@ -43,13 +45,21 @@ let FilterRims:React.FC<PropsType> = (props) => {
 
         //Ooops i am sorry :)
         let colors=allParams.colors.map(c=>
-          <option value={c.id}>{c.title}</option>)
+          <option selected={
+            props.filters.color==c.id ?
+            true : false} value={c.id}>{c.title}</option>)
         let materials=allParams.materials.map(m=>
-          <option value={m.id}>{m.title}</option>)
+          <option selected={
+            props.filters.material==m.id ?
+            true : false} value={m.id}>{m.title}</option>)
         let shapes=allParams.shapes.map(s=>
-          <option value={s.id}>{s.title}</option>)
+          <option selected={
+            props.filters.shape==s.id ?
+            true : false} value={s.id}>{s.title}</option>)
         let brands=allParams.brands.map(b=>
-          <option value={b.id}>{b.title}</option>)
+          <option selected={
+            props.filters.brand==b.id ?
+            true : false} value={b.id}>{b.title}</option>)
         
 
         return (
@@ -82,10 +92,20 @@ let FilterRims:React.FC<PropsType> = (props) => {
               <div className="col-md-4 mb-2">
                 <div>
                 <select name="sort_by_price" onChange={handleChange}
-                className="form-control" style={{fontSize:"1.05em"}}>
-                  <option value={"null"}>Сначала Новые</option>
-                  <option value={"true"}>Сначала Подешевле</option>
-                  <option value={"false"}>Сначала Подороже</option>
+                className="form-control" style={{fontSize:"1.05em"}}
+                >
+                  <option value={"null"} 
+                  selected={props.filters.sort_by_price==null ? true : false}>
+                    Сначала Новые
+                  </option>
+                  <option value={"true"}
+                  selected={props.filters.sort_by_price==true ? true : false}>
+                    Сначала Подешевле
+                  </option>
+                  <option value={"false"}
+                  selected={props.filters.sort_by_price==false ? true : false}>
+                    Сначала Подороже
+                  </option>
                 </select></div>
               </div>
             </div>

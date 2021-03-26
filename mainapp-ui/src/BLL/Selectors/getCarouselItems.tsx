@@ -1,8 +1,9 @@
 import {Carousel} from "react-bootstrap"
 import { CarousetlItemType } from "../Reducers/mainReducer"
+import { AppStateType } from "../store"
 
-let getCarouselItems=(carouselItems:Array<CarousetlItemType>)=>{
-    return carouselItems.map(c=><Carousel.Item>
+let getCarouselItems=(state:AppStateType)=>{
+    return state.main.carouselItems.map(c=><Carousel.Item>
     <img
     src={c.image}
     className="w-100 h-50"
