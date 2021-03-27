@@ -13,7 +13,7 @@ let initialState={
     title:"" as string,
     image:"" as string,
     price:0 as number,
-    category:{title:"Все" ,id:0} as UsualFilterType,
+    category:{title:"" ,id:0} as UsualFilterType,
     is_available:true as boolean,
     suggested:[] as Array<AccessoryType>
 }

@@ -7,6 +7,37 @@ type ThunkType=ThunkAction<Promise<void>,AppStateType,unknown,ActionType>
 let SET_RIMS:"rimsReducer/SET_RIMS"="rimsReducer/SET_RIMS"
 let SET_ALL_PARAMS:"rimsReducer/SET_ALL_PARAMS"="rimsReducer/SET_ALL_PARAMS"
 
+let forTest={
+    rims:[{
+        title:"BR-03941",
+        id:1,
+        brand:{title:"Brioni",id:1},
+        article:"201901283",
+        color:{title:"Black",id:1},
+        material:{title:"Metall",id:1},
+        shape:{title:"Ava",id:1},
+        image:"https://static.onlinetrade.ru/img/items/b/xiaomi_mi_computer_glasses_black_1405733_1.jpg",
+        gender:{title:"Man",id:1},
+        price:5000,
+        is_available:true,
+        is_sunGlasses:false
+    },
+    {
+        title:"BR-03941",
+        id:1,
+        brand:{title:"Brioni",id:1},
+        article:"201901283",
+        color:{title:"Black",id:1},
+        material:{title:"Metall",id:1},
+        shape:{title:"Ava",id:1},
+        image:"https://cdna.lystit.com/1200/630/tr/photos/2013/09/12/ray-ban-blackgreen-light-force-wayfarer-sunglasses-product-2-13408051-664209834.jpeg",
+        gender:{title:"Man",id:1},
+        price:5000,
+        is_available:true,
+        is_sunGlasses:false
+    }]
+}
+
 export type AllParamsType={
     colors:Array<UsualFilterType>
     materials:Array<UsualFilterType>

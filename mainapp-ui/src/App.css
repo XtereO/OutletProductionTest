@@ -88,6 +88,11 @@
 .ItemExit{
   animation: ItemAnimationExitMouse 900ms forwards;
 }
+.ItemGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
 
 
 @keyframes ItemAnimationOnMouse{

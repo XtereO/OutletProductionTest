@@ -14,5 +14,4 @@ modelsToRegister=[
     Gender,CategoryAccessory,
     Accessory,MarketPoint
 ]
-for a in modelsToRegister:
-    admin.site.register(a)
+for a in modelsToRegister:admin.site.register(a)

@@ -1,15 +1,12 @@
 import axios from  "axios"
-import Cookies from "js-cookie"
 import {FiltersType} from "../BLL/Reducers/rimsReducer"
 import { MarketPointType } from "../Types/AboutUsTypes";
 import { AccessoryType } from "../Types/AccessorysTypes";
 import { BrandType, RimType,UsualFilterType } from "../Types/RimsTypes";
-const csrftoken = Cookies.get('csrftoken');
 
 
 let instance=axios.create({
     baseURL:"http://cr37069-django.tw1.ru/api/",
-    
 })
 
 type GetRimsType={

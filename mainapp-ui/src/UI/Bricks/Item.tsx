@@ -17,32 +17,38 @@ let Item: React.FC<PropsType> = (props) => {
         setHover(!onHover)
     }
     return <div className="col-md-4 mt-2">
-        <div className="card"
-            onMouseEnter={changeBehavior} onMouseLeave={changeBehavior} >
-            <div className="center" style={{overflow:"hidden",height:"270px"}}>
-                <img src={props.image}
+        <div className="card" style={{height:"410px"}}
+            onMouseEnter={changeBehavior} onMouseLeave={changeBehavior} 
+            >
+            <div className="center" style={{overflow:"hidden",height:"270px",display:'flex',alignItems:'center'}}>
+                <NavLink to={props.is_accessory ? 
+                        `/accessuar/${props.id}` 
+                        :`/rim/${props.id}`}>
+                <img src={props.image} 
                     className={onHover ? "ItemOn " : "ItemExit "} />
+                </NavLink>
             </div>
             <div className="card-body">
                 <div className="mb-2">
                     {props.title}
                 </div><div></div>
-                <div className="left">
-                    <div>
-                        Цена {props.price} ₽
+                
+                <div className="left" style={{width:"35%",overflow:"hidden"}}>
+                    <div style={{display:"inline",overflow:'hidden'}}>
+                        Цена {props.price}₽
                     </div>
-
+ 
                     { props.article && 
                     <div style={{ fontSize: "0.7em" }} className="text-secondary">
                         Артикул {props.article}
                     </div>}
                 </div>
-                <div className="right">
+                <div className="right" style={{display:'flex',justifyContent:"flex-end",width:"50%",overflow:"hidden"}}>
                     {onHover ?
                         <NavLink to={props.is_accessory ? 
                         `/accessuar/${props.id}` 
                         :`/rim/${props.id}`}>
-                            <button style={{fontSize:"1.1em"}} 
+                            <button style={{fontSize:"0.9em"}} 
                             className="btn btn-warning text-white mt-1">
                                 Подробнее
                             </button>
@@ -51,6 +57,7 @@ let Item: React.FC<PropsType> = (props) => {
                         <div className="mt-3">{props.brand}</div>
                     }
                 </div>
+                
             </div>
         </div>
     </div>

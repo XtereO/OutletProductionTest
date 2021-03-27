@@ -21,7 +21,7 @@ let Lens:React.FC<PropsType>=(props)=>{
         <div className="mb-4 center">
             {brands}
         </div>
-        <div className="container mt-4">
+        <div className="container mt-4 center">
             <h3 className="text-center">Линзы</h3>
             Помимо оправ и солнцезащитных очков 
             у нас также имеются линзы

@@ -31,7 +31,7 @@ let AboutUs:React.FC<PropsType>=React.memo((props)=>{
                     </svg>
                 </h3>
 
-                <div style={{fontSize:"1.1em"}}>
+                <div style={{fontSize:"1.1em"}} className="center">
                     
                     <span className="ml-2"></span>
                     Outlet-SPb оптика. Хотите купить модные брендовые очки 
@@ -55,9 +55,9 @@ let AboutUs:React.FC<PropsType>=React.memo((props)=>{
                 </h3>
 
                 <div>
-                    <span style={{fontSize:"1.2em"}}>
+                    <p style={{fontSize:"1.2em"}} className="center">
                     Все наши торговые точки в СПб
-                    </span>
+                    </p>
                     <ul className="list-group">
                         {marketPoints}
                     </ul>
